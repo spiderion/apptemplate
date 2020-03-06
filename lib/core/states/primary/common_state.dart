@@ -1,0 +1,46 @@
+import 'package:flutter/widgets.dart';
+import 'package:testtodelete/core/states/primary/base_bloc_primary_state.dart';
+
+class MessageInfoState extends BaseBlocPrimaryState {
+  final String message;
+  final String elementNameMessage;
+
+  MessageInfoState(this.message, {this.elementNameMessage});
+
+  @override
+  call(param) {
+    if (param is BuildContext) {
+      /*    Fluttertoast.showToast(
+          msg: "${elementNameMessage ?? ""} ${Translations.of(param).text(message)}",
+          backgroundColor: AppColors.infoMessageBackground(param),
+          toastLength: Toast.LENGTH_LONG);*/
+    }
+  }
+}
+
+class ContinueState extends BaseBlocPrimaryState {
+  @override
+  call(param) {
+    if (param is Function) {
+      param();
+    }
+  }
+}
+
+class PopPageState extends BaseBlocPrimaryState {
+  final dynamic returnedParam;
+
+  PopPageState({this.returnedParam});
+
+  @override
+  call(param) {
+    if (param is BuildContext) {
+      Navigator.of(param).pop(true);
+    }
+  }
+}
+
+class PermissionAllowedState extends BaseBlocPrimaryState {
+  @override
+  call(param) {}
+}
