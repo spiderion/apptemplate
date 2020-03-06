@@ -1,8 +1,8 @@
-import 'package:testtodelete/dependency/sub_modules/core_dependency_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/data_holder_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/exception_captor_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/service_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/core_dependency_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/data_holder_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/exception_captor_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/service_sub_module.dart';
 
 class RepositorySubModule implements ISubModule {
   CoreDependencySubModule _coreDependencySubModule;

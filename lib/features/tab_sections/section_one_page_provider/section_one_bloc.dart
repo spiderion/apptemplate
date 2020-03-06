@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:testtodelete/core/states/primary/base_bloc_primary_state.dart';
+import 'package:apptemplate/core/states/primary/base_bloc_primary_state.dart';
 
 
 class SectionOneBloc {

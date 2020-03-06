@@ -1,7 +1,7 @@
 
-import 'package:testtodelete/dependency/sub_modules/core_dependency_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/data_path_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/core_dependency_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/data_path_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
 
 
 class ServiceSubModule implements ISubModule {

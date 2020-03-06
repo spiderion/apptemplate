@@ -1,4 +1,4 @@
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
 
 class FactorySubModule implements ISubModule {
   @override

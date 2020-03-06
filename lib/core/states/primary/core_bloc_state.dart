@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testtodelete/core/loaders/loader.dart';
+import 'package:apptemplate/core/loaders/loader.dart';
 
 import 'base_bloc_primary_state.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:testtodelete/core/states/primary/base_bloc_primary_state.dart';
+import 'package:apptemplate/core/states/primary/base_bloc_primary_state.dart';
 
 class MessageInfoState extends BaseBlocPrimaryState {
   final String message;

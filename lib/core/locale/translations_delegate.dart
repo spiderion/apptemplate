@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testtodelete/core/locale/translations.dart';
+import 'package:apptemplate/core/locale/translations.dart';
 
 class TranslationsDelegate extends LocalizationsDelegate<Translations> {
   final bool isTest;

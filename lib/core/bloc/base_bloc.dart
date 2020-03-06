@@ -2,9 +2,9 @@ library core.bloc;
 
 import 'dart:async';
 
-import 'package:testtodelete/core/bloc/core_bloc_event.dart';
-import 'package:testtodelete/core/states/dataState/base_bloc_secondary_state.dart';
-import 'package:testtodelete/core/states/primary/base_bloc_primary_state.dart';
+import 'package:apptemplate/core/bloc/core_bloc_event.dart';
+import 'package:apptemplate/core/states/dataState/base_bloc_secondary_state.dart';
+import 'package:apptemplate/core/states/primary/base_bloc_primary_state.dart';
 
 ///The core.bloc holds the state of the widget
 abstract class BaseBloc {

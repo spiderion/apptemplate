@@ -1,10 +1,10 @@
 
 import 'package:flutter/cupertino.dart';
-import 'package:testtodelete/dependency/sub_modules/bloc_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/facade_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/section_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/use_case_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/bloc_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/facade_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/section_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/use_case_sub_module.dart';
 
 class DProvider extends InheritedWidget {
   final List<ISubModule> _subModuleList;

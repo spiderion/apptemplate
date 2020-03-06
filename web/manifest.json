@@ -1,6 +1,6 @@
 {
-    "name": "testtodelete",
-    "short_name": "testtodelete",
+    "name": "apptemplate",
+    "short_name": "apptemplate",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",

@@ -1,7 +1,7 @@
 
-import 'package:testtodelete/core/configuration/remote_configuration.dart';
-import 'package:testtodelete/data/dao.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/core/configuration/remote_configuration.dart';
+import 'package:apptemplate/data/dao.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
 
 class CoreDependencySubModule implements ISubModule {
   Dao database;

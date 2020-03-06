@@ -1,9 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testtodelete/core/locale/translations.dart';
-import 'package:testtodelete/features/tab_sections/section.dart';
-import 'package:testtodelete/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
+import 'package:apptemplate/core/locale/translations.dart';
+import 'package:apptemplate/features/tab_sections/section.dart';
+import 'package:apptemplate/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
 
 class SectionOnePageProvider extends Section {
   final SectionOneBloc _unstableBloc;

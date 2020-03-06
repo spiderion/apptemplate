@@ -1,6 +1,6 @@
 
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/use_case_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/use_case_sub_module.dart';
 
 class ValueNotifierSubModule implements ISubModule {
   UseCaseSubModule _useCaseSubModule;

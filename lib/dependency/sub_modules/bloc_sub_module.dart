@@ -1,12 +1,12 @@
-import 'package:testtodelete/dependency/sub_modules/core_dependency_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/ebr_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/error_state_resolver_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/factory_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/use_case_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/util_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/value_notifier_sub_module.dart';
-import 'package:testtodelete/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
+import 'package:apptemplate/dependency/sub_modules/core_dependency_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/ebr_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/error_state_resolver_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/factory_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/use_case_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/util_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/value_notifier_sub_module.dart';
+import 'package:apptemplate/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
 
 class BlocSubModule implements ISubModule {
   UseCaseSubModule _useCaseSubModule;

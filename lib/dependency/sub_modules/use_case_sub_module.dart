@@ -1,9 +1,9 @@
-import 'package:testtodelete/dependency/sub_modules/abr_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/core_dependency_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/ebr_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/i_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/repository_sub_module.dart';
-import 'package:testtodelete/dependency/sub_modules/value_notifier_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/abr_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/core_dependency_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/ebr_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/repository_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/value_notifier_sub_module.dart';
 
 class UseCaseSubModule implements ISubModule {
   EBRSubModule _ebrSubModule;

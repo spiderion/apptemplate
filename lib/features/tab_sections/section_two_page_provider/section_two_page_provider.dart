@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testtodelete/core/locale/translations.dart';
+import 'package:apptemplate/core/locale/translations.dart';
 
 import '../section.dart';
 

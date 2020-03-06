@@ -1,8 +1,8 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testtodelete/core/locale/translations.dart';
-import 'package:testtodelete/features/tab_sections/section.dart';
+import 'package:flutter/widgets.dart';
+import 'package:apptemplate/core/locale/translations.dart';
+
+import '../section.dart';
 
 class SectionThreePageProvider extends Section {
   @override
@@ -16,6 +16,8 @@ class SectionThreePageProvider extends Section {
 class _SectionThreePageProviderState extends State<SectionThreePageProvider> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("SectionThreePage"),); //ProfilePage(() => DProvider.of(context).blocSubModule.profileBloc);
+    return Center(
+      child: Text("SectionThreePage"),
+    );
   }
 }
