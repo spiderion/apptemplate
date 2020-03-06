@@ -1,4 +1,4 @@
-# testtodelete
+# App Template
 
 A new Flutter application.
 
