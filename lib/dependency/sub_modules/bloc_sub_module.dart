@@ -6,7 +6,9 @@ import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
 import 'package:apptemplate/dependency/sub_modules/use_case_sub_module.dart';
 import 'package:apptemplate/dependency/sub_modules/util_sub_module.dart';
 import 'package:apptemplate/dependency/sub_modules/value_notifier_sub_module.dart';
-import 'package:apptemplate/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
+import 'package:apptemplate/features/login/log_in_bloc.dart';
+import 'package:apptemplate/features/root/root_bloc.dart';
+import 'package:apptemplate/features/tab_section/section_one_page_provider/section_one_bloc.dart';
 
 class BlocSubModule implements ISubModule {
   UseCaseSubModule _useCaseSubModule;
@@ -16,8 +18,6 @@ class BlocSubModule implements ISubModule {
   EBRSubModule _ebrSubModule;
   ValueNotifierSubModule _valueNotifierSubModule;
   FactorySubModule _factorySubModule;
-
-  SectionOneBloc get sectionOneBloc => SectionOneBloc();
 
   @override
   setSubModules(List<ISubModule> subModules) {
@@ -31,19 +31,15 @@ class BlocSubModule implements ISubModule {
     _factorySubModule = subModules.singleWhere((element) => element is FactorySubModule);
   }
 
- /* LogInBloc get logInBloc {
-    return LogInBloc(_useCaseSubModule.loggingUseCase, _errorStateResolverSubModule.defaultErrorStateResolver,
-        () {
-      _valueNotifierSubModule.userFullDataNotifier.register();
-    });
+  LogInBloc get logInBloc {
+    return LogInBloc();
   }
 
-  RootBloc get rootBloc => RootBloc(_coreDependencySubModule.pushNotificationManager(
-      updateUserDataUseCase: _useCaseSubModule.updateUserDataUseCase));
+  SectionOneBloc get sectionOneBloc => SectionOneBloc();
 
-  SectionOneBloc get sectionOneBloc => SectionOneBloc(false, _useCaseSubModule);
+  RootBloc get rootBloc => RootBloc();
 
-  UserSettingsBloc get userSettingsBloc => UserSettingsBloc(
+/*  UserSettingsBloc get userSettingsBloc => UserSettingsBloc(
       _useCaseSubModule.loggingUseCase,
       _useCaseSubModule.updateUserDataUseCase,
       _useCaseSubModule.retrieveUserDataUseCase,

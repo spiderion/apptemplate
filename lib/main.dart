@@ -1,63 +1,74 @@
+import 'package:apptemplate/core/business_rules/first_page_launcher_abr.dart';
+import 'package:apptemplate/dependency/dependency_module.dart';
+import 'package:apptemplate/dependency/sub_modules/abr_sub_module.dart';
+import 'package:apptemplate/dependency/sub_modules/i_sub_module.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(MyApp());
+import 'core/loaders/loader.dart';
+import 'dependency/dependency_provider.dart';
+import 'dependency/sub_modules/locale_sub_module.dart';
+import 'ui_design/theme.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'App Template',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-      ),
-      home: HomePage(title: 'App Template'),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //var activatedRemoteConfig = await FirebaseRemoteConfigImpl.getActivatedRemoteConfig(RemoteConfig.instance);
+  //FirebaseRemoteConfigImpl remoteConfigImpl = null;//FirebaseRemoteConfigImpl(activatedRemoteConfig);
+  runApp(MyApp(DependencyModule(null).subModules));
 }
 
-class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
-  final String title;
+class MyApp extends StatefulWidget {
+  final List<ISubModule> _subModuleList;
+
+  const MyApp(this._subModuleList, {Key key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+    return DProvider(
+      widget._subModuleList,
+      child: MaterialApp(
+        theme: appTheme,
+        title: 'apptemplate',
+        home: FutureBuilder(
+            future: getPageLauncher().decideFirstScreen(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return snapshot.data;
+              } else if (snapshot.hasError) {
+                return getPageLauncher().getLogInPage();
+              } else {
+                return Scaffold(
+                  body: Center(
+                    child: Loader(),
+                  ),
+                );
+              }
+            }),
+        localizationsDelegates: [
+          widget._subModuleList.whereType<LocaleSubModule>().first.translationDelegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        supportedLocales: widget._subModuleList.whereType<LocaleSubModule>().first.supportedLocales,
       ),
     );
+  }
+
+  FirstPageLauncherABR getPageLauncher() {
+    return widget._subModuleList.whereType<ABRSubModule>().first.firstPageLauncherABR;
   }
 }

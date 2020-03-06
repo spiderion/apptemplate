@@ -1,0 +1,15 @@
+{
+    "app_name": "Lyve",
+    "enter_email": "Inserisci l'email",
+    "sign_up": "Registrati",
+    "log_in": "Accedi",
+    "enter_password": "Inserisci password",
+    "dont_have_an_account": "Non hai un account? ",
+    "confirm_password": "Conferma Password",
+    "forgot_password": "Hai dimenticato la password?",
+    "please_verify_network_connection": "please_verify_network_connection",
+    "first_memorable_place": "First memorable place",
+    "stories": "Storie",
+    "map_page_title": "Map",
+    "profilePageTitle": "Profilo"
+}

@@ -1,9 +1,9 @@
 
+import 'package:apptemplate/features/tab_section/section.dart';
+import 'package:apptemplate/features/tab_section/section_one_page_provider/section_one_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:apptemplate/core/locale/translations.dart';
-import 'package:apptemplate/features/tab_sections/section.dart';
-import 'package:apptemplate/features/tab_sections/section_one_page_provider/section_one_bloc.dart';
 
 class SectionOnePageProvider extends Section {
   final SectionOneBloc _unstableBloc;
@@ -15,7 +15,7 @@ class SectionOnePageProvider extends Section {
 
   @override
   BottomNavigationBarItem createBottomNavigationBarItem(BuildContext context) => BottomNavigationBarItem(
-      title: Text(Translations.of(context).text('my_stories')), icon: Icon(Icons.favorite_border));
+      title: Text(Translations.of(context).text('page_one')), icon: Icon(Icons.home));
 }
 
 class _SectionOnePageProviderState extends State<SectionOnePageProvider> {

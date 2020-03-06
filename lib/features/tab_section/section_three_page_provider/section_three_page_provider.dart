@@ -10,7 +10,7 @@ class SectionThreePageProvider extends Section {
 
   @override
   BottomNavigationBarItem createBottomNavigationBarItem(BuildContext context) => BottomNavigationBarItem(
-      title: Text(Translations.of(context).text('profile')), icon: Icon(Icons.person));
+      title: Text(Translations.of(context).text('page_three')), icon: Icon(Icons.settings));
 }
 
 class _SectionThreePageProviderState extends State<SectionThreePageProvider> {
